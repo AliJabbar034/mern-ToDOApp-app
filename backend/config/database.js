@@ -6,7 +6,7 @@ export const createConnection = async () => {
     process.env.MONGO_PASS
   );
   try {
-    const connect = await mongoose.connect(process.env.LOCAL_URL);
+    const connect = await mongoose.connect(Db);
     console.log("Connected");
   } catch (error) {
     console.log("error during connecting to Database. Exiting", error.message);
